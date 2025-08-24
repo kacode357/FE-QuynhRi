@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     "Educational resource on Vietnam's subsidy economic system (Bao Cấp) from 1975-1986. Bilingual Vietnamese-English content.",
   generator: "v0.app",
+  icons: {
+    icon: '/co-dang.jpg', // Dòng này là điểm mấu chốt.
+  },
 }
 
 export default function RootLayout({
