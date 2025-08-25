@@ -1,26 +1,59 @@
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
+import Link from "next/link"; // Nhớ import Link
 
 interface FooterProps {
-  language: "vi" | "en"
-  isVisible: boolean
+  language: "vi" | "en";
+  isVisible: boolean;
 }
 
 export function Footer({ language, isVisible }: FooterProps) {
   return (
-    <footer className={`border-t bg-card/30 py-12 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
+    <footer
+      className={`border-t bg-card/30 py-12 ${
+        isVisible ? "animate-fade-in-up" : "opacity-0"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <h4 className="font-bold mb-4 font-serif">{language === "vi" ? "Tài Liệu Tham Khảo" : "References"}</h4>
+          <h4 className="font-bold mb-4 font-serif">
+            {language === "vi" ? "Tài Liệu Tham Khảo" : "References"}
+          </h4>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            <span className="hover:text-foreground transition-colors cursor-pointer">tulieuvankien.dangcongsan.vn</span>
+            <Link
+              href="https://tulieuvankien.dangcongsan.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              tulieuvankien.dangcongsan.vn
+            </Link>
             <Separator orientation="vertical" className="h-4" />
-            <span className="hover:text-foreground transition-colors cursor-pointer">
+            <Link
+              href="https://baotanglichsu.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
               {language === "vi" ? "Bảo tàng Lịch sử Quốc gia" : "National Museum of History"}
-            </span>
+            </Link>
             <Separator orientation="vertical" className="h-4" />
-            <span className="hover:text-foreground transition-colors cursor-pointer">THƯ VIỆN PHÁP LUẬT</span>
+            <Link
+              href="https://thuvienphapluat.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              THƯ VIỆN PHÁP LUẬT
+            </Link>
             <Separator orientation="vertical" className="h-4" />
-            <span className="hover:text-foreground transition-colors cursor-pointer">TTXVN</span>
+            <Link
+              href="https://www.vietnamplus.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              TTXVN
+            </Link>
           </div>
           <p className="mt-6 text-xs text-muted-foreground">
             {language === "vi"
@@ -30,5 +63,5 @@ export function Footer({ language, isVisible }: FooterProps) {
         </div>
       </div>
     </footer>
-  )
+  );
 }

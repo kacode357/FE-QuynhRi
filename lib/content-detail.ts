@@ -8,14 +8,20 @@ export const detailContent = {
         text: `Sau 1975, đất nước phải khắc phục hậu quả chiến tranh, sản xuất trì trệ, lưu thông rối ren, đời sống nhân dân rất khó khăn. 
 Đảng thừa nhận “tình hình kinh tế – xã hội đang có những khó khăn gay gắt… những mất cân đối lớn trong nền kinh tế chậm được thu hẹp; đời sống nhân dân lao động còn nhiều khó khăn”. 
 Cùng với đó là thiếu sót trong cách đánh giá thực tiễn, dẫn tới sai lầm về mục tiêu, bước đi và quản lý kinh tế.`,
-        source: "tulieuvankien.dangcongsan.vn",
+        source: {
+          text: "tulieuvankien.dangcongsan.vn",
+          url: "https://tulieuvankien.dangcongsan.vn/",
+        },
       },
       {
         heading: "Phân phối bằng tem phiếu",
         text: `Để ứng phó khan hiếm, Nhà nước áp dụng phân phối theo định mức qua tem phiếu, sổ lương thực; 
 hàng hóa thiết yếu không mua bán tự do như cơ chế thị trường. 
 Bảo tàng Lịch sử Quốc gia mô tả rõ cơ chế và phạm vi áp dụng, cho thấy tính chất bắt buộc của phân phối hiện vật trong điều kiện thiếu thốn.`,
-        source: "Bảo tàng Lịch sử Quốc gia",
+        source: {
+          text: "Bảo tàng Lịch sử Quốc gia",
+          url: "https://baotanglichsu.vn/vi",
+        },
       },
       {
         heading: "Ý nghĩa lịch sử",
@@ -24,8 +30,8 @@ Nhưng khi chuyển sang thời bình, những hạn chế nội tại của cơ
       },
     ],
     images: [
-      { alt: "Tem vải / Phiếu vải", src: "/images/boi-canh/tem-vai.jpg" },
-      { alt: "Hiện vật minh họa", src: "/images/boi-canh/hien-vat.jpg" },
+      { alt: "Hình ảnh người dân xếp hàng mua lương thực", src: "/anhboicanhradoi1.png" },
+      { alt: "Một số mẫu tem phiếu thời bao cấp", src: "/anhboicanhradoi2.png" },
     ],
   },
 
@@ -38,14 +44,20 @@ Nhưng khi chuyển sang thời bình, những hạn chế nội tại của cơ
         text: `After 1975, the country had to overcome the consequences of war, stagnant production, chaotic circulation, and very difficult living conditions. 
 The Party acknowledged that “the socio-economic situation was facing severe difficulties... major imbalances in the economy were slow to narrow; the living conditions of workers remained very difficult”. 
 At the same time, shortcomings in assessing reality led to mistakes in objectives, steps, and economic management.`,
-        source: "tulieuvankien.dangcongsan.vn",
+        source: {
+          text: "tulieuvankien.dangcongsan.vn",
+          url: "https://tulieuvankien.dangcongsan.vn/",
+        },
       },
       {
         heading: "Rationing System",
         text: `To cope with shortages, the State applied rationed distribution through coupons and food books; 
 essential goods were not freely traded as in a market mechanism. 
 The National Museum of History describes in detail the mechanism and scope of application, highlighting the compulsory nature of material distribution under scarcity.`,
-        source: "National Museum of History",
+        source: {
+          text: "National Museum of History",
+          url: "https://baotanglichsu.vn/en",
+        },
       },
       {
         heading: "Historical Significance",
@@ -54,8 +66,8 @@ However, when transitioning to peacetime, the internal limitations of the system
       },
     ],
     images: [
-      { alt: "Cloth coupon", src: "/images/boi-canh/cloth-coupon.jpg" },
-      { alt: "Historical artifact", src: "/images/boi-canh/artifact.jpg" },
+      { alt: "People queuing for food rations", src: "/anhboicanhradoi1.png" },
+      { alt: "Ration stamp samples from the subsidy period", src: "/anhboicanhradoi2.png" },
     ],
   },
 }

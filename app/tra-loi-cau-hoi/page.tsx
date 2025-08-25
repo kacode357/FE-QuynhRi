@@ -63,14 +63,34 @@ export default function TraLoiCauHoiPage() {
             <p className="text-muted-foreground">{data.subtitle}</p>
           </header>
 
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold">
+              {language === "vi" ? "Đặt vấn đề" : "Context"}
+            </h2>
+            <p className="leading-relaxed whitespace-pre-line">{data.preamble}</p>
+          </section>
+
           <div className="space-y-8">
             {data.sections.map((sec, idx) => (
               <section key={idx} className="space-y-3">
                 <h2 className="text-xl font-semibold">{sec.heading}</h2>
                 <p className="leading-relaxed whitespace-pre-line">{sec.text}</p>
-                {sec.source && (
+                {sec.source && sec.source.length > 0 && (
                   <p className="text-sm text-muted-foreground">
-                    {language === "vi" ? "Nguồn" : "Source"}: {sec.source}
+                    {language === "vi" ? "Nguồn" : "Source"}:{" "}
+                    {sec.source.map((s, sIdx) => (
+                      <span key={sIdx}>
+                        <Link
+                          href={s.url}
+                          className="underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {s.text}
+                        </Link>
+                        {sIdx < sec.source.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
                   </p>
                 )}
               </section>
@@ -78,13 +98,31 @@ export default function TraLoiCauHoiPage() {
           </div>
 
           <section className="space-y-3">
-            <h3 className="text-lg font-medium">{language === "vi" ? "Hình ảnh" : "Images"}</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {data.images.map((img, i) => (
-                <div key={i} className="bg-card border rounded-xl h-56 md:h-64 flex items-center justify-center text-sm text-muted-foreground">
-                  {img.alt}
-                </div>
-              ))}
+            <h3 className="text-lg font-medium">
+              {language === "vi" ? "Kết luận" : "Conclusion"}
+            </h3>
+            <div className="rounded-xl border bg-card p-6 shadow">
+              <p className="leading-relaxed whitespace-pre-line">
+                {data.conclusion.text}
+              </p>
+            </div>
+          </section>
+
+          <section className="space-y-3">
+            <h3 className="text-lg font-medium">
+              {language === "vi" ? "Video tư liệu" : "Reference video"}
+            </h3>
+            <div className="aspect-video w-full overflow-hidden rounded-xl border bg-card">
+              <iframe
+                className="h-full w-full"
+                src={`https://www.youtube.com/embed/${
+                  data.video.url.split("v=")[1]
+                }`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             </div>
           </section>
         </article>

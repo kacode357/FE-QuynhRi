@@ -1,58 +1,80 @@
 // lib/content-detail-answer.ts
 export const detailAnswer = {
   vi: {
-    title: 'Trả lời câu hỏi: “Có phải một sai lầm của ĐCSVN không?”',
+    title: 'Đưa ra nhận định về: "Có phải một sai lầm của ĐCSVN không?"',
     subtitle: "Đặt vấn đề và cách nhìn",
+    preamble: `Sau 1975, Đảng lựa chọn mô hình kinh tế kế hoạch hóa tập trung quan liêu bao cấp trên phạm vi cả nước.
+
+Mô hình này đã tạo ra một số thành tựu bước đầu (ổn định chính trị, khôi phục kinh tế sau chiến tranh, xây dựng cơ sở CNXH), nhưng tồn tại nhiều hạn chế: năng suất thấp, khủng hoảng lương thực, trì trệ sản xuất, lạm phát cao.
+
+Đặc biệt, cải cách giá – lương – tiền 1985 thất bại, dẫn đến khủng hoảng kinh tế - xã hội nghiêm trọng, trở thành vấn đề được đặt ra: Có phải Đảng đã sai lầm?`,
     sections: [
       {
-        heading: "Về lựa chọn ban đầu",
-        text: `Trong điều kiện chiến tranh, bao vây cấm vận và thiếu thốn, việc kế hoạch hóa tập trung và phân phối theo định mức có cơ sở lịch sử – thực tiễn. 
-Nhờ đó vẫn duy trì được sản xuất, bảo đảm tối thiểu cho quốc phòng và dân sinh một thời gian dài. 
-Bối cảnh khó khăn và lựa chọn tình thế được nêu rõ trong các tổng kết của Đại hội VI.`,
-        source: "tulieuvankien.dangcongsan.vn",
+        heading: "Nguyên nhân khách quan",
+        text: `Nguyên nhân khách quan dẫn đến khủng hoảng kinh tế-xã hội do xây dựng đất nước từ nền kinh tế nghèo nàn, lạc hậu, sản xuất nhỏ là phổ biến, bị bao vây, cấm vận nhiều năm, nguồn viện trợ từ nước ngoài giảm mạnh; hậu quả nặng nề của 30 năm chiến tranh chưa kịp hàn gắn thì chiến tranh ở biên giới ở hai đầu đất nước làm nảy sinh những khó khăn mới.`,
+        source: [
+          {
+            text: "tulieuvankien.dangcongsan.vn",
+            url: "https://tulieuvankien.dangcongsan.vn/",
+          },
+        ],
       },
       {
-        heading: "Về vận hành",
-        text: `Khi điều kiện thay đổi, cơ chế bao cấp bộc lộ sai lầm trọng yếu: méo mó giá–lương–tiền, triệt tiêu động lực, lưu thông rối ren, lạm phát ba con số. 
-Đảng công khai thừa nhận các sai lầm nghiêm trọng và kéo dài, quyết liệt sửa chữa bằng đường lối Đổi mới (1986) và chuỗi cải cách tiếp theo.`,
-        source: "tulieuvankien.dangcongsan.vn, tcct",
-      },
-      {
-        heading: "Ý nghĩa phần trả lời",
-        text: `Không thể gọi ngay “bao cấp” là một sai lầm từ đầu. Phải đặt trong bối cảnh lịch sử và diễn biến vận hành, để thấy vừa có cơ sở tất yếu, vừa có sai lầm lớn trong quản lý.`,
+        heading: "Nguyên nhân chủ quan",
+        text: `Về chủ quan là do những sai lầm của Đảng trong đánh giá tình hình, xác
+định mục tiêu, bước đi, sai lầm trong bố trí cơ cấu kinh tế; sai lầm trong cải tạo xã hội chủ nghĩa, trong lĩnh vực phân phối, lưu thông; duy trì quá lâu cơ chế tập trung, quan liêu, bao cấp; buông lỏng chuyên chính vô sản trong quản lý kinh tế, quản lý xã hội và trong đấu tranh chống âm mưu, thủ đoạn phá hoại nhiều mặt của địch.`,
+        source: [
+          {
+            text: "Tạp chí Công Thương",
+            url: "https://tapchicongthuong.vn/",
+          },
+        ],
       },
     ],
-    images: [
-      { alt: "Tem phiếu thời bao cấp", src: "" },
-      { alt: "Tư liệu tổng kết ĐH VI", src: "" },
-    ],
+    conclusion: {
+      isHighlighted: true,
+      text: `“Thời kỳ bao cấp” không phải là một sai lầm theo nghĩa một quyết định sai ngay từ khởi điểm lịch sử; nhưng trong quá trình vận hành đã có những sai lầm lớn về cơ chế và phương thức quản lý – điều mà Đảng đã chính thức tự phê bình, khắc phục bằng Đổi mới (từ 1986), chuyển sang kinh tế nhiều thành phần, vận hành theo quy luật thị trường dưới sự quản lý của Nhà nước.`,
+    },
+    video: {
+      url: "https://www.youtube.com/watch?v=xFHawdU99KQ",
+    },
   },
   en: {
-    title: 'Answering the question: “Was it a CPV mistake?”',
+    title: 'Give your opinion on: "Is it a mistake of the Communist Party of Vietnam?"',
     subtitle: "Context and evaluation",
+    preamble: `After 1975, the Party chose a centralized bureaucratic planned economy model throughout the country.
+
+This model achieved some initial successes (political stability, post-war economic recovery, building a socialist foundation), but it had many limitations: low productivity, food crises, production stagnation, and high inflation.
+
+In particular, the failed price-wage-money reform of 1985 led to a severe socio-economic crisis, raising the question: Did the Party make a mistake?`,
     sections: [
       {
-        heading: "Initial choice",
-        text: `Under wartime, blockade and scarcity, centralized planning and rationing had historical–practical grounds. 
-It maintained production and minimal defense and livelihood for a long period. 
-This situational choice was highlighted in the 6th Congress summaries.`,
-        source: "tulieuvankien.dangcongsan.vn",
+        heading: "Objective causes",
+        text: `Objective causes of the socio-economic crisis were building a country from a poor and backward economy, with small-scale production being common, facing many years of blockade and embargo, and a sharp decrease in foreign aid. The severe consequences of 30 years of war had not been healed when border wars at both ends of the country created new difficulties.`,
+        source: [
+          {
+            text: "tulieuvankien.dangcongsan.vn",
+            url: "https://tulieuvankien.dangcongsan.vn/",
+          },
+        ],
       },
       {
-        heading: "Operations",
-        text: `When conditions changed, the subsidy system revealed major flaws: distorted price–wage–money relations, lack of incentives, chaotic circulation, triple-digit inflation. 
-The Party openly admitted serious, prolonged mistakes and decisively corrected with Renovation (1986) and subsequent reforms.`,
-        source: "tulieuvankien.dangcongsan.vn, Industry and Trade Review",
-      },
-      {
-        heading: "Meaning of the answer",
-        text: `The subsidy period cannot be labeled a “mistake from the start”. 
-It must be seen in historical context and operational evolution: both inevitable grounds and serious management flaws.`,
+        heading: "Subjective causes",
+        text: `Subjectively, these were due to the Party's mistakes in assessing the situation, setting goals, and taking steps; mistakes in economic structure planning; mistakes in socialist transformation, distribution, and circulation; maintaining the centralized, bureaucratic, and subsidized mechanism for too long; and loosening proletarian dictatorship in economic and social management and in fighting against the enemy's multifaceted sabotage plots and tricks.`,
+        source: [
+          {
+            text: "Industry and Trade Review",
+            url: "https://tapchicongthuong.vn/",
+          },
+        ],
       },
     ],
-    images: [
-      { alt: "Ration coupon", src: "" },
-      { alt: "6th Congress documents", src: "" },
-    ],
+    conclusion: {
+      isHighlighted: true,
+      text: `The "subsidy period" was not a mistake in the sense of being an incorrect decision from the historical outset; but in its operation, there were major flaws in the mechanism and management methods – which the Party officially self-criticized and corrected with Renovation (from 1986), transitioning to a multi-sector economy operating under market principles with State management.`,
+    },
+    video: {
+      url: "https://www.youtube.com/watch?v=xFHawdU99KQ",
+    },
   },
-}
+};

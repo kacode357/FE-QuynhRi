@@ -71,9 +71,17 @@ export default function QuaTrinhDoiMoiPage() {
               <section key={idx} className="space-y-3">
                 <h2 className="text-xl font-semibold">{sec.heading}</h2>
                 <p className="leading-relaxed whitespace-pre-line">{sec.text}</p>
-                {sec.source ? (
+                {sec.source && sec.source.length > 0 ? (
                   <p className="text-sm text-muted-foreground">
-                    {language === "vi" ? "Nguồn" : "Source"}: <span className="underline">{sec.source}</span>
+                    {language === "vi" ? "Nguồn" : "Source"}:{" "}
+                    {sec.source.map((s, sIdx) => (
+                      <span key={sIdx}>
+                        <Link href={s.url} className="underline" target="_blank" rel="noopener noreferrer">
+                          {s.text}
+                        </Link>
+                        {sIdx < sec.source.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
                   </p>
                 ) : null}
               </section>
@@ -128,9 +136,9 @@ export default function QuaTrinhDoiMoiPage() {
           <footer className="pt-6 border-t">
             <div className="text-sm text-muted-foreground">
               {language === "vi" ? "Tham khảo thêm:" : "See also:"}{" "}
-              <span className="underline">tulieuvankien.dangcongsan.vn</span>,{" "}
-              <span className="underline">THƯ VIỆN PHÁP LUẬT</span>,{" "}
-              <span className="underline">TTXVN</span>
+              <Link href="https://tulieuvankien.dangcongsan.vn/" className="underline" target="_blank" rel="noopener noreferrer">tulieuvankien.dangcongsan.vn</Link>,{" "}
+              <Link href="https://thuvienphapluat.vn/" className="underline" target="_blank" rel="noopener noreferrer">THƯ VIỆN PHÁP LUẬT</Link>,{" "}
+              <Link href="https://vnanet.vn/" className="underline" target="_blank" rel="noopener noreferrer">TTXVN</Link>
             </div>
           </footer>
         </article>

@@ -126,6 +126,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+      /* Đổi font mặc định của trang thành Playfair Display */
+      font-family: var(--font-playfair-display);
+    }
 }
 
 /* Added custom animations for enhanced user experience */

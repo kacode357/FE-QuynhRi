@@ -74,7 +74,14 @@ export default function BoiCanhRaDoiPage() {
                 <p className="leading-relaxed whitespace-pre-line">{sec.text}</p>
                 {sec.source ? (
                   <p className="text-sm text-muted-foreground">
-                    {language === "vi" ? "Nguồn" : "Source"}: <span className="underline">{sec.source}</span>
+                    {language === "vi" ? "Nguồn" : "Source"}:{" "}
+                    {sec.source.url ? (
+                      <Link href={sec.source.url} className="underline" target="_blank" rel="noopener noreferrer">
+                        {sec.source.text}
+                      </Link>
+                    ) : (
+                      <span className="underline">{sec.source.text}</span>
+                    )}
                   </p>
                 ) : null}
               </section>
@@ -129,10 +136,10 @@ export default function BoiCanhRaDoiPage() {
           <footer className="pt-6 border-t">
             <div className="text-sm text-muted-foreground">
               {language === "vi" ? "Tham khảo thêm:" : "See also:"}{" "}
-              <span className="underline">tulieuvankien.dangcongsan.vn</span>,{" "}
-              <span className="underline">
+              <Link href="https://tulieuvankien.dangcongsan.vn/" className="underline" target="_blank" rel="noopener noreferrer">tulieuvankien.dangcongsan.vn</Link>,{" "}
+              <Link href="https://baotanglichsu.vn/vi" className="underline" target="_blank" rel="noopener noreferrer">
                 {language === "vi" ? "Bảo tàng Lịch sử Quốc gia" : "National Museum of History"}
-              </span>
+              </Link>
             </div>
           </footer>
         </article>

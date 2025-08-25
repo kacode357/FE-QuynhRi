@@ -71,9 +71,17 @@ export default function HanCheCoChePage() {
               <section key={idx} className="space-y-3">
                 <h2 className="text-xl font-semibold">{sec.heading}</h2>
                 <p className="leading-relaxed whitespace-pre-line">{sec.text}</p>
-                {sec.source ? (
+                {sec.source && sec.source.length > 0 ? (
                   <p className="text-sm text-muted-foreground">
-                    {language === "vi" ? "Nguồn" : "Source"}: <span className="underline">{sec.source}</span>
+                    {language === "vi" ? "Nguồn" : "Source"}:{" "}
+                    {sec.source.map((s, sIdx) => (
+                      <span key={sIdx}>
+                        <Link href={s.url} className="underline" target="_blank" rel="noopener noreferrer">
+                          {s.text}
+                        </Link>
+                        {sIdx < sec.source.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
                   </p>
                 ) : null}
               </section>
@@ -128,12 +136,12 @@ export default function HanCheCoChePage() {
           <footer className="pt-6 border-t">
             <div className="text-sm text-muted-foreground">
               {language === "vi" ? "Tham khảo thêm:" : "See also:"}{" "}
-              <span className="underline">THƯ VIỆN PHÁP LUẬT</span>,{" "}
-              <span className="underline">TTXVN</span>,{" "}
-              <span className="underline">tcct</span>,{" "}
-              <span className="underline">
+              <Link href="https://thuvienphapluat.vn/" className="underline" target="_blank" rel="noopener noreferrer">THƯ VIỆN PHÁP LUẬT</Link>,{" "}
+              <Link href="https://vnanet.vn/" className="underline" target="_blank" rel="noopener noreferrer">TTXVN</Link>,{" "}
+              <Link href="https://tapchicongthuong.vn/" className="underline" target="_blank" rel="noopener noreferrer">tcct</Link>,{" "}
+              <Link href="https://baotanglichsu.vn/vi" className="underline" target="_blank" rel="noopener noreferrer">
                 {language === "vi" ? "Bảo tàng Lịch sử Quốc gia" : "National Museum of History"}
-              </span>
+              </Link>
             </div>
           </footer>
         </article>
